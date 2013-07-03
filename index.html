@@ -1,10 +1,26 @@
 ---
 layout: default
-title: adamthody.com
+title: Home
 ---
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   <article>
 	  <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%A, %B %d, %Y" }}</small></h3>
 	  {{ post.content }}
   </article>
 {% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination pagination-large text-center">
+	<ul>
+  	  {% if paginator.previous_page %}
+    	<li><a href="/page{{ paginator.previous_page }}" class="previous">Older</a></li>
+  	  {% else %}
+    	<li><span class="muted">Older</span></li>
+  	  {% endif %}
+	  {% if paginator.next_page %}
+    	<li><a href="/page{{ paginator.next_page }}" class="next">Newer</a></li>
+  	  {% else %}
+    	<li><span class="muted">Newer</span></li>
+  	  {% endif %}
+	</ul>
+</div>
