@@ -4,7 +4,8 @@ title: Home
 ---
 {% for post in paginator.posts %}
   <article>
-	  <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%A, %B %d, %Y" }}</small></h3>
+	  <h3 class="hidden-phone"><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%A, %B %d, %Y" }}</small></h3>
+	  <h3 class="visible-phone"><a href="{{ post.url }}">{{ post.title }}</a><br><small>{{ post.date | date: "%A, %B %d, %Y" }}</small></h3>
 	  {{ post.content }}
   </article>
 {% endfor %}
