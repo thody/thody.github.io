@@ -13,7 +13,11 @@ title: Home
 <div class="pagination pagination-large text-center">
 	<ul>
   	  {% if paginator.previous_page %}
-    	<li><a href="/page{{ paginator.previous_page }}" class="previous">Older</a></li>
+	  	{% if paginator.previous_page == 1 %}
+			<li><a href="/">Previous</a></li>
+		{% else %}
+			<li><a href="/{{ paginator.previous_page_path }}">Previous</a></li>
+	    {% endif %}
   	  {% else %}
     	<li><span class="muted">Older</span></li>
   	  {% endif %}
