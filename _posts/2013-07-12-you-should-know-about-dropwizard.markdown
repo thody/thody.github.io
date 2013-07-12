@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "You should know about Dropwizard."
+title:  "You should know about&nbsp;Dropwizard."
 date:   2013-07-12 18:00:00
 categories: frameworks
 ---

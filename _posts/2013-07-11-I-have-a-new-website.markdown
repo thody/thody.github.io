@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I have a new website!"
+title:  "I have a new&nbsp;website!"
 date:   2013-07-11 20:00:00
 categories: announcements
 ---
