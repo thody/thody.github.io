@@ -10,4 +10,4 @@ to build and maintain it. Despite best intentions, I don't post all that often, 
 wanted to deal with a database, or pay for the hosting required for a more dynamic site. Hence,
 I've switched over to using Jekyll and GitHub Pages, and I'm very happy so far.
 
-Stay tuned while I crank out some of the posts I've been queuing up!
+Stay tuned, while I crank out some of the posts I've been queuing up!
