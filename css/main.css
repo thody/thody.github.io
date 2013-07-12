@@ -46,3 +46,7 @@ header {
 article {
 	margin-bottom: 40px;
 }
+
+h3.visible-phone {
+	line-height: 100%;
+}
