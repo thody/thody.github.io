@@ -77,7 +77,7 @@ h3.visible-phone {
 }
 
 @media (max-width: 480px) {
-	h1, h2 {
+	.post h1, .post h2 {
 		margin-bottom: 0;
 		line-height: 100%;
 	}
