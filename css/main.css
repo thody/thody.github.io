@@ -76,6 +76,12 @@ h3.visible-phone {
 	line-height: 100%;
 }
 
+@media (max-width: 480px) {
+	h1 {
+		font-size: 25px!important;
+	}
+}
+
 @media (max-width: 767px) {
 	header.post { 
 		text-align: center;
