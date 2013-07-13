@@ -1,5 +1,26 @@
 body {
 	padding-top: 20px;
+
+	-moz-transition: 300ms opacity ease-out 0s;
+	-o-transition: 300ms opacity ease-out 0s;
+	-webkit-transition: 300ms opacity ease-out 0s;
+	-ms-transition: 300ms opacity ease-out 0s;
+	transition: 300ms opacity ease-out 0s;
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+body.loaded {
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	-moz-transition: 1000ms opacity ease-out 0s;
+	-o-transition: 1000ms opacity ease-out 0s;
+	-webkit-transition: 1000ms opacity ease-out 0s;
+	-ms-transition: 1000ms opacity ease-out 0s;
+	transition: 1000ms opacity ease-out 0s;
 }
 
 h1, h2, h3 {
