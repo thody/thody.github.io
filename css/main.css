@@ -106,3 +106,8 @@ h3.visible-phone {
 	header.post .span2 {
 		width: 100px;
 	}
+}
+
+footer {
+	margin-top: 30px;
+}
