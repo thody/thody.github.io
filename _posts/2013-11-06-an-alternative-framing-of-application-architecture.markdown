@@ -1,0 +1,12 @@
+The most common issue I've seen in applications is the entanglement between the business logic and the interaction with external entities.
+
+These days, architectures are typically described as "layered". We're all familiar with the ubiquitous presentation, business, and persistence layer diagrams. However, despite the familiarity almost every developer has with this model, I find it excedingly common that the line between presentation and business layers get blurred. The separation of the persistence layer generally seems to be well-understood, but the distinction between business and presentation layers seems more difficult to grasp for some.
+
+Alistair Cockburn proposes an alternative model, the ["Hexagonal Architecture"](http://alistair.cockburn.us/Hexagonal+architecture), or "Ports & Adapters". The general
+premise is the same, separation of presentation, business and persistence, however I believe these concepts are articulated more clearly in his model. I highly recommend reading his explanation of the [model](http://alistair.cockburn.us/Hexagonal+architecture), but the bite-sized version is this: consider your application to be pure logic, which exposes ports, to be used by adapters to each of your external integrations.
+
+What does that mean exactly? Let's assume your application needs to respond consistently, regardless of how it is "driven". The "driver" of your application could be anything – a human user, another application, or a test. If we imagine that all logic is encapsulately cleanly by our application, then each of the drivers of our application requires an adapter which can take its directions, and transform them into a inputs which can be fed into the ports (APIs) exposed by the application. In other words, your adapters should only contain logic which is uniquely suited to converting a driver's input into input your application can understand. If it does anything more than this, then the equivalent inputs from discrete drivers will result in different outcomes. This is unless, of course, you've duplicated the misplaced logic across all your adapters (also bad).
+
+I think the fundamental mindset shift that this model instills, is that *your presentation layer is not your application*, it's merely a collection of adapters that make your application easy to drive for it's various drivers.
+
+With this new understanding, in my next post, I'll discuss how an architecture like this can be implemented and maintained in a sane way.
