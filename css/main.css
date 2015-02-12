@@ -57,11 +57,11 @@ h3 small {
 }
 
 a {
-	color: #4ECDC4;
+	color: #FF6B6B;
 }
 
 a:hover {
-	color: #556270;
+	color: #C44D58;
 }
 
 header {
@@ -77,6 +77,10 @@ h3.visible-phone {
 }
 
 @media (max-width: 480px) {
+	body {
+		background-image: none;	
+	}
+	
 	.post h1, .post h2 {
 		margin-bottom: 0;
 		line-height: 100%;
@@ -91,7 +95,7 @@ h3.visible-phone {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) {	
 	header.post { 
 		text-align: center;
 	}
@@ -102,14 +106,24 @@ h3.visible-phone {
 	}
 }
 
+@media (min-width: 767px) {
+	body {
+		color: #7A7A7A;
+		background-image: url(/img/background1.jpg);
+		background-size: cover;
+	}
+}
+
 @media (min-width: 980px) {
 	header.post .span2 {
 		width: 100px;
 	}
 }
 
-footer {
-	margin-top: 30px;
+@media (max-width: 1050px) {
+	body {
+		background-size: auto;
+	}
 }
 
 .sm-logo {
